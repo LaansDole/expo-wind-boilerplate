@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ee907264-1753-4abe-92d1-7a090b21567e"
+      }
+    },
+    "owner": "laansdole"
   }
 }
