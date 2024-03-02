@@ -6,8 +6,8 @@ You should have Expo Go application on your mobile device. It is available in bo
 - Clone the project to your local machine
 - Install `node_modules`
 ```bash
-npm install
-npm install --global eas-cli
+yarn install
+yarn install --global eas-cli
 ```
 ### In the project directory, you can run:
 - Runs the app in the development mode. Open it in the Expo app on your phone to view it.
@@ -18,7 +18,7 @@ npm start
 ```bash
 npm run tunnel
 ```
-- Runs the app on an Android device or emulator.
+- Runs the app on an Android device or emulator (**Recommended**).
 ```bash
 npm run android
 ```

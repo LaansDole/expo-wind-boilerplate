@@ -8,6 +8,9 @@ const PlaceholderImg = require('./assets/images/background-image.png');
 import * as ImagePicker from 'expo-image-picker';
 import { useState } from 'react';
 
+import './global.css';
+import "./nativewind-output";
+
 export default function App() {
   const [showAppOptions, setShowAppOptions] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -28,7 +31,7 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
+    <View className='flex-1 items-center justify-center bg-black'>
       <View style={styles.imageContainer}>
         <ImageViewer
           placeholderImageSource={PlaceholderImg}
@@ -51,7 +54,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#25292e',
     alignItems: 'center',
   },
   imageContainer: {
