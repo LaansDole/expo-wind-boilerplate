@@ -10,6 +10,11 @@ yarn install
 yarn install --global eas-cli
 ```
 ### In the project directory, you can run:
+- ***For first run:*** 
+```bash
+npm start
+```
+From here, if you cannot run `Expo Go` by scanning the QR Code, `Ctrl + C` and run `npm run tunnel`. 
 - Runs the app in the development mode. Open it in the Expo app on your phone to view it.
 ```bash
 npm start
