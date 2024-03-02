@@ -30,3 +30,8 @@ npm run ios
 ```bash
 npm run web
 ```
+
+### Tools and Technologies
+- [Expo](https://docs.expo.dev/)
+- [NativeWind](https://www.nativewind.dev/quick-starts/expo)
+#### ***For more information, see [Packages and Dependencies](./package.json)***
