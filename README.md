@@ -7,7 +7,7 @@ You should have Expo Go application on your mobile device. It is available in bo
 - Install `node_modules`
 ```bash
 yarn install
-yarn install --global eas-cli
+yarn global add eas-cli
 ```
 ### In the project directory, you can run:
 - ***For first run:*** 

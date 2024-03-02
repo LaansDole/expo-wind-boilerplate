@@ -30,7 +30,9 @@
     "@babel/core": "^7.20.0",
     "autoprefixer": "^10.4.18",
     "concurrently": "^8.2.2",
-    "postcss": "^8.4.35"
+    "crypto": "^1.0.1",
+    "postcss": "^8.4.35",
+    "postcss-loader": "^8.1.1"
   },
   "private": true
 }
