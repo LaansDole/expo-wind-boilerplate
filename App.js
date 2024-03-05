@@ -1,19 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, Pressable } from 'react-native';
+/* Components */
 
-import Button from './components/Button';
-import ImageViewer from './components/ImageViewer';
-const PlaceholderImg = require('./assets/images/background-image.png');
-
-import * as ImagePicker from 'expo-image-picker';
-import { useState } from 'react';
-
-import './global.css';
-import "./nativewind-output";
+import EmojiPicker from './components/EmojiPicker';
+import EmojiList from './components/EmojiList';
 
 import CircleButton from './components/CircleButton';
 import IconButton from './components/IconButton';
+import Button from './components/Button';
+import ImageViewer from './components/ImageViewer';
 
+const PlaceholderImg = require('./assets/images/background-image.png');
+
+/* Libraries */
+
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, Image, Pressable } from 'react-native';
+import * as ImagePicker from 'expo-image-picker';
+import { useState } from 'react';
+
+/* Tailwindcss Configuration */
+
+import './global.css';
+import "./nativewind-output";
 import { NativeWindStyleSheet } from "nativewind";
 
 NativeWindStyleSheet.setOutput({
@@ -21,6 +28,8 @@ NativeWindStyleSheet.setOutput({
 });
 
 export default function App() {
+  const [pickedEmoji, setPickedEmoji] = useState(null);
+  const [isModalVisible, setIsModalVisible] = useState(false);
   const [showAppOptions, setShowAppOptions] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -43,7 +52,13 @@ export default function App() {
     setShowAppOptions(false);
   };
 
-  const onAddSticker = () => { };
+  const onAddSticker = () => {
+    setIsModalVisible(true);
+  };
+
+  const onModalClose = () => {
+    setIsModalVisible(false);
+  }
 
   const onSaveImageAsync = async () => { };
 
@@ -68,7 +83,9 @@ export default function App() {
           <Button label="Use this photo" onPress={() => setShowAppOptions(true)} />
         </View>
       )}
-
+      <EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
+        <EmojiList onSelect={setPickedEmoji} onCloseModal={onModalClose} />
+      </EmojiPicker>
       <StatusBar style='auto' />
     </View>
   );
