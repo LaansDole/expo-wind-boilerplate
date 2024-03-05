@@ -1,5 +1,6 @@
 ## Pre-requisite
-You should have Expo Go application on your mobile device. It is available in both Google Play Store and App Store
+You should have Expo Go application on your mobile device. It is available in both Google Play Store and App Store.
+***Optional but highly recommended:*** Download and Install [AirDroid Cast](https://www.airdroid.com/ad/airdroid-cast/) on both your mobile device and PC/Laptop Device.
 
 ## Local Build
 
@@ -23,7 +24,7 @@ npm start
 ```bash
 npm run tunnel
 ```
-- Runs the app on an Android device or emulator (**Recommended**).
+- Runs the app on an Android device or emulator.
 ```bash
 npm run android
 ```
