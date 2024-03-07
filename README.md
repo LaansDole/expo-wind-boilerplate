@@ -5,7 +5,7 @@
 ## Local Build
 
 - Clone the project to your local machine
-- Install `node_modules`
+- Install `node_modules` package
 ```bash
 yarn install
 yarn global add eas-cli
